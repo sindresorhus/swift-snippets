@@ -18,22 +18,22 @@ public final class DarkMode {
 		}
 	}
 
-	static var isDark: Bool {
+	static var isEnabled: Bool {
 		return UserDefaults.standard.string(forKey: "AppleInterfaceStyle") == "Dark"
 	}
 
 	static var blackColor: NSColor {
-		return isDark ? .white : .black
+		return isEnabled ? .white : .black
 	}
 
 	@objc
 	private static func selectorHandler() {
-		onChange?(isDark)
+		onChange?(isEnabled)
 	}
 }
 
-DarkMode.isDark
+DarkMode.isEnabled
 
-DarkMode.onChange = { isDark in
-	print("Is dark mode enabled?", isDark)
+DarkMode.onChange = { isEnabled in
+	print("Is dark mode enabled?", isEnabled)
 }

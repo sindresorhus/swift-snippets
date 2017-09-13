@@ -6,10 +6,10 @@
 ## [macOS Dark Mode handling](DarkMode.playground/Contents.swift)
 
 ```swift
-print(DarkMode.isDark)
+print(DarkMode.isEnabled)
 
-DarkMode.onChange = { isDark in
-	print("Is dark mode enabled?", isDark)
+DarkMode.onChange = { isEnabled in
+	print("Is dark mode enabled?", isEnabled)
 }
 ```
 
