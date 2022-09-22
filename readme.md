@@ -2,7 +2,6 @@
 
 > Various nifty Swift snippets and playgrounds I have created
 
-
 ## [macOS Dark Mode handling](DarkMode.playground/Contents.swift)
 
 ```swift

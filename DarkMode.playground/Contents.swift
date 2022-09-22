@@ -4,7 +4,9 @@ import PlaygroundSupport
 PlaygroundPage.current.needsIndefiniteExecution = true
 
 
-/// Check or get notified about macOS Dark Mode status
+/**
+Check or get notified about macOS Dark Mode status.
+*/
 public final class DarkMode {
 	private static let notificationName = NSNotification.Name("AppleInterfaceThemeChangedNotification")
 
@@ -19,11 +21,11 @@ public final class DarkMode {
 	}
 
 	static var isEnabled: Bool {
-		return UserDefaults.standard.string(forKey: "AppleInterfaceStyle") == "Dark"
+		UserDefaults.standard.string(forKey: "AppleInterfaceStyle") == "Dark"
 	}
 
 	static var blackColor: NSColor {
-		return isEnabled ? .white : .black
+		isEnabled ? .white : .black
 	}
 
 	@objc
